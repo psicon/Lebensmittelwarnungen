@@ -1,0 +1,37 @@
+<ion-view view-title="Alle Warnungen">
+
+  <ion-content>
+
+
+
+                <div class="list">
+
+        <a ng-repeat="items in data.rss.channel.item"
+           ng-click="openlink(items.link)"
+           class="item item-thumbnail-left" target="_blank">
+
+          <img ng-src="{{items.description}}">
+
+          <h2>{{items.title }}</h2>
+          <h4>Meldung vom <b>{{convertToDate(items.pubDate)  | date:'dd.MM.yyyy'}}</b></h4>
+
+
+
+        </a>
+
+      </div>
+
+            </ion-content>
+
+            <ion-footer-bar align-title="left" class="bar-calm">
+  <!--<div class="buttons">
+    <button class="button">Left Button</button>
+  </div>--><img src="./img/passta_icon.png" style="height:90%"/>
+
+  <h1 class="title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Passta der Passwortverwalter</h1>
+  <div class="buttons" ng-click="doSomething()">
+    <button ng-click="deimudderseigesicht()" class="button">Download</button>
+  </div>
+</ion-footer-bar>
+
+</ion-view>
